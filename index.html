@@ -1,1 +1,39 @@
 <html><head><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><link rel="icon" href="favicon.ico" type="image/x-icon"><link rel="stylesheet" type="text/css" href="style.css"><title>Pok&eacute;mon Emerald Textbox Simulator</title></head><body><textarea></textarea><div id="tips"><h1>Tips</h1><p>You don&rsquo;t need to leave space for the <img src="down_arrow.gif" alt="down arrow"> indicator.</p><p>The phrase <span class="player">{PLAYER}</span> allows enough space for the widest possible player name.</p><p>If you&rsquo;re writing text to fit in a Match Call (Pok&eacute;Nav) textbox, only type up to the start of the <span class="grey">shaded</span> area.</p><p>Font by <a href="https://fontstruct.com/fontstructions/show/1975556/pokemon-emerald-9" target="_blank">aztecwarrior28</a>.</div></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Textbox sim</title>
+<style>
+    @font-face {
+        font-family: tbs_pokemon_emerald;
+        src: url('pokemon_emerald.ttf');
+    }
+    body { font-family: Arial; padding: 20px; }
+    input, textarea { margin: 5px 0; width: 300px; }
+    button { margin-top: 10px; }
+    #textOverlay { position: absolute; background: transparent; border: none; outline: none; resize: none; padding: 20px 0 0; color: #636363; overflow: hidden; }
+</style>
+</head>
+<body>
+
+<h2>dont ask me, i'm just a textbox simulator</h2>
+<br> 
+
+<div style="position: relative; width: 840px; margin-top: 20px;">
+    <div style="background: url('box2.gif') 20px 20px no-repeat; width: 1680px; height: 400px; position: relative;">
+        <textarea id="textOverlay" style="position: absolute; top: 10px; left: 80px; width: 796px; height: 216px; font-size: 46px; line-height: 54px; background: transparent; border: none; outline: none; resize: none; padding: 20px 0 0; color: #636363; overflow: hidden; font-family: tbs_pokemon_emerald;"></textarea>
+    </div>
+</div>
+    
+
+function downloadFile(filename, content) {
+    const blob = new Blob([content], { type: "text/plain" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    a.click();
+}
+</script>
+
+</body>
+</html>
